@@ -19,10 +19,7 @@ function computerPlay(){
 }*/
 function playRound(playersSelection, computerSelection, playerScore,computerScore){
    playersSelection = playersSelection.toString().toLowerCase();
-   computerSelection = computerSelection.toString().toLowerCase();
-    if(playersSelection != 'rock' && playersSelection != 'scissors' && playersSelection != 'paper'){
-        alert('please choose one of the option: rock, paper, scissors');        
-    }else{
+   computerSelection = computerSelection.toString().toLowerCase();     
    if(playersSelection.toString() == computerSelection.toString()){
        console.log("the computer selection was:", computerSelection);
        console.log('Its tie!');
@@ -59,7 +56,6 @@ function playRound(playersSelection, computerSelection, playerScore,computerScor
            playerScore = playerScore + 1;
        }
      }
-   }
 }
 function game()
 {
@@ -68,7 +64,12 @@ function game()
     for(let i = 0; i < 5; i++){
         computerPlay();
         let playersSelection = prompt("Choose one of this selection you can write them as you like - in UPPERCASE or in lowercase - Rock, Paper,Scissors");
+         if(playersSelection != 'rock' && playersSelection != 'scissors' && playersSelection != 'paper'){
+            alert('please choose one of the option: rock, paper, scissors');  
+            i--;
+         }else{
         playRound(playersSelection,computerPlay(),playersScore,computerScore);
+         }
     }
     if(playersScore > computerScore){
         console.log("You are the Winner!!!");
