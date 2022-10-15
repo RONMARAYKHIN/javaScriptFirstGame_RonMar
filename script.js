@@ -20,6 +20,9 @@ function computerPlay(){
 function playRound(playersSelection, computerSelection, playerScore,computerScore){
    playersSelection = playersSelection.toString().toLowerCase();
    computerSelection = computerSelection.toString().toLowerCase();
+    if(playersSelection != 'rock' && playersSelection != 'scissors' && playersSelection != 'paper'){
+        alert("please choose one of the option: rock, paper, scissors);        
+    }else{
    if(playersSelection.toString() == computerSelection.toString()){
        console.log("the computer selection was:", computerSelection);
        console.log('Its tie!');
@@ -55,6 +58,7 @@ function playRound(playersSelection, computerSelection, playerScore,computerScor
            console.log('Player Won');
            playerScore = playerScore + 1;
        }
+     }
    }
 }
 function game()
