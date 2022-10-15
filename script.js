@@ -21,7 +21,7 @@ function playRound(playersSelection, computerSelection, playerScore,computerScor
    playersSelection = playersSelection.toString().toLowerCase();
    computerSelection = computerSelection.toString().toLowerCase();
     if(playersSelection != 'rock' && playersSelection != 'scissors' && playersSelection != 'paper'){
-        alert("please choose one of the option: rock, paper, scissors);        
+        alert('please choose one of the option: rock, paper, scissors');        
     }else{
    if(playersSelection.toString() == computerSelection.toString()){
        console.log("the computer selection was:", computerSelection);
